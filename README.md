@@ -2,7 +2,15 @@
 
 ## 최신버전
 
+### 통상버전
 
+0.1.0-260123-release
+
+https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.0-260123-release
+
+### nightly
+
+없음
 
 ## Rhythm Tracers에 대해
 
