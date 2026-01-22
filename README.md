@@ -28,3 +28,7 @@ https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.0-26
 - U_E팩 4, 6, 8키를 지원합니다
 - Aery팩 5키를 지원합니다
 - 통상 BMS는 4, 5, 6, 8 어떤 형식으로도 플레이 할 수 있습니다
+
+## 설명서
+
+https://prunusnira.notion.site/Rhythm-Tracers-Alpha-Test-34216cef3d1647a58af6350509dfd9cc
