@@ -4,15 +4,15 @@
 
 ### 통상버전
 
-0.1.1-260205-release (2026.02.05)
+0.1.1-260207-release (2026.02.07)
 
-https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.1-260205-release
+https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.1-260207-release
 
 ### nightly
 
-0.1.1-260204-nightly (2026.02.04)
+0.1.2-260206-nightly (2026.02.06)
 
-https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.1-260204-nightly
+https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.2-260206-nightly
 
 ## Rhythm Tracers에 대해
 
