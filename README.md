@@ -10,9 +10,9 @@ https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.1-26
 
 ### nightly
 
-0.1.2-260314-nightly (2026.03.14)
+0.1.2-260403-nightly (2026.04.03)
 
-https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.2-260314-nightly
+[https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.2-260314-nightly](https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.2-260403-nightly)
 
 ## Rhythm Tracers에 대해
 
