@@ -4,9 +4,9 @@
 
 ### 통상버전
 
-0.1.1-260207-release (2026.02.07)
+0.1.2-260409-release (2026.04.09)
 
-https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.1-260207-release
+[https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.1-260207-release](https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.2-260409-release)
 
 ### nightly
 
