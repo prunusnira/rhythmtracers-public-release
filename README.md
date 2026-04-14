@@ -2,17 +2,9 @@
 
 ## 최신버전
 
-### 통상버전
+0.1.3.00
 
-0.1.2-260409-release (2026.04.09)
-
-[https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.1-260207-release](https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.2-260409-release)
-
-### nightly
-
-0.1.2-260403-nightly (2026.04.03)
-
-[https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.2-260314-nightly](https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.2-260403-nightly)
+https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.3.00
 
 ## Rhythm Tracers에 대해
 
