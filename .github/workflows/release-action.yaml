@@ -1,0 +1,56 @@
+name: RhythmTracers Release Action (Update README)
+on:
+  release:
+    type: [published]
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      
+      - name: Update README.md
+        run: |
+          echo "# Rhythm Tracers - Download GitHub Page" >> README.md
+          echo "" >> README.md
+          echo "## 최신버전" >> README.md
+          echo "" >> README.md
+          echo "### ${{ github.event.release.tag_name }} (${{ github.event.release.published_at }})" >> README.md
+          echo "" >> README.md
+          echo "${{ github.event.release.html_url }}" >> README.md
+          echo "" >> README.md
+          echo "## Rhythm Tracers에 대해" >> README.md
+          echo "" >> README.md
+          echo "- Rhythm Tracers는 BMS 형식의 파일을 플레이 할 수 있는 BMS 구동기입니다" >> README.md
+          echo "- 통상 BMS를 4, 5, 6, 8키로 플레이 할 수 있습니다" >> README.md
+          echo "" >> README.md
+          echo "## 특징" >> README.md
+          echo "" >> README.md
+          echo "- 재생 디바이스로 ASIO를 사용할 수 있습니다" >> README.md
+          echo "- 노트 이펙트 (배치) 로 사용자가 위치를 지정하는 '커스텀 랜덤' 기능이 있습니다" >> README.md
+          echo "- 플레이 데이터를 보관하여 자신과의 실시간 1:1 대결을 해볼 수 있습니다" >> README.md
+          echo "" >> README.md
+          echo "### 지원 형식" >> README.md
+          echo "" >> README.md
+          echo "- U_E팩 4, 6, 8키를 지원합니다" >> README.md
+          echo "- Aery팩 5키를 지원합니다" >> README.md
+          echo "- 통상 BMS는 4, 5, 6, 8 어떤 형식으로도 플레이 할 수 있습니다" >> README.md
+          echo "" >> README.md
+          echo "## 설명서" >> README.md
+          echo "" >> README.md
+          echo "https://prunusnira.notion.site/Rhythm-Tracers-Alpha-Test-34216cef3d1647a58af6350509dfd9cc" >> README.md
+          echo "" >> README.md
+      
+      - name: Commit and Update
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git commit -m "docs: update README for release ${{ github.event.release.tag_name }}"
+          git push
