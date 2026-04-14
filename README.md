@@ -2,7 +2,7 @@
 
 ## 최신버전
 
-0.1.3.00
+### 0.1.3.00 (2026/04/14)
 
 https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.3.00
 
