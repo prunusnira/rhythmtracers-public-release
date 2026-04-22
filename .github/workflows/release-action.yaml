@@ -11,17 +11,29 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: main
       
+      - name: Remove README.md
+        uses: JesseTG/rm@v1.0.3
+        with:
+          path: /README.md
+
+      - name: Create README.md
+        uses: 1arp/create-a-file-action@0.4.5
+        with:
+          path: /README.md
+          isAbsolutePath: true
+
       - name: Update README.md
         run: |
           echo "# Rhythm Tracers - Download GitHub Page" >> README.md
           echo "" >> README.md
           echo "## 최신버전" >> README.md
           echo "" >> README.md
-          echo "### ${{ github.event.release.tag_name }} (${{ github.event.release.published_at }})" >> README.md
+          echo "![Version](https://img.shields.io/badge/RhythmTracers-v${{ github.event.release.tag_name }}-brightgreen.svg)" >> README.md
+          echo "![Publish](https://img.shields.io/badge/Published_at-${{ github.event.release.published_at }}-blue.svg)" >> README.md
           echo "" >> README.md
           echo "${{ github.event.release.html_url }}" >> README.md
           echo "" >> README.md
