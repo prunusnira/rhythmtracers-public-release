@@ -1,7 +1,7 @@
 name: RhythmTracers Release Action (Update README)
 on:
   release:
-    type: [published]
+    types: [published]
 
 permissions:
   contents: write
@@ -18,48 +18,62 @@ jobs:
         with:
           ref: main
       
-      - name: Remove README.md
-        uses: JesseTG/rm@v1.0.3
-        with:
-          path: /README.md
-
       - name: Update README.md
         run: |
-          echo "# Rhythm Tracers - Download GitHub Page" >> README.md
-          echo "" >> README.md
-          echo "## 최신버전" >> README.md
-          echo "" >> README.md
-          echo "![Version](https://img.shields.io/badge/RhythmTracers-v${{ github.event.release.tag_name }}-brightgreen.svg)" >> README.md
-          echo "![Publish](https://img.shields.io/badge/Published_at-${{ github.event.release.published_at }}-blue.svg)" >> README.md
-          echo "" >> README.md
-          echo "${{ github.event.release.html_url }}" >> README.md
-          echo "" >> README.md
-          echo "## Rhythm Tracers에 대해" >> README.md
-          echo "" >> README.md
-          echo "- Rhythm Tracers는 BMS 형식의 파일을 플레이 할 수 있는 BMS 구동기입니다" >> README.md
-          echo "- 통상 BMS를 4, 5, 6, 8키로 플레이 할 수 있습니다" >> README.md
-          echo "" >> README.md
-          echo "## 특징" >> README.md
-          echo "" >> README.md
-          echo "- 재생 디바이스로 ASIO를 사용할 수 있습니다" >> README.md
-          echo "- 노트 이펙트 (배치) 로 사용자가 위치를 지정하는 '커스텀 랜덤' 기능이 있습니다" >> README.md
-          echo "- 플레이 데이터를 보관하여 자신과의 실시간 1:1 대결을 해볼 수 있습니다" >> README.md
-          echo "" >> README.md
-          echo "### 지원 형식" >> README.md
-          echo "" >> README.md
-          echo "- U_E팩 4, 6, 8키를 지원합니다" >> README.md
-          echo "- Aery팩 5키를 지원합니다" >> README.md
-          echo "- 통상 BMS는 4, 5, 6, 8 어떤 형식으로도 플레이 할 수 있습니다" >> README.md
-          echo "" >> README.md
-          echo "## 설명서" >> README.md
-          echo "" >> README.md
-          echo "https://prunusnira.notion.site/Rhythm-Tracers-Alpha-Test-34216cef3d1647a58af6350509dfd9cc" >> README.md
-          echo "" >> README.md
+          node <<'NODE'
+          const fs = require('node:fs');
+
+          const { release } = JSON.parse(
+            fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8')
+          );
+          const readme = [
+            '# Rhythm Tracers - Download GitHub Page',
+            '',
+            '## 최신버전',
+            '',
+            `![Version](https://img.shields.io/badge/RhythmTracers-v${release.tag_name}-brightgreen.svg)`,
+            `![Publish](https://img.shields.io/badge/Published_at-${release.published_at}-blue.svg)`,
+            '',
+            release.html_url,
+            '',
+            '## Rhythm Tracers에 대해',
+            '',
+            '- Rhythm Tracers는 BMS 형식의 파일을 플레이 할 수 있는 BMS 구동기입니다',
+            '- 통상 BMS를 4, 5, 6, 8키로 플레이 할 수 있습니다',
+            '',
+            '## 특징',
+            '',
+            '- 재생 디바이스로 ASIO를 사용할 수 있습니다',
+            "- 노트 이펙트 (배치) 로 사용자가 위치를 지정하는 '커스텀 랜덤' 기능이 있습니다",
+            '- 플레이 데이터를 보관하여 자신과의 실시간 1:1 대결을 해볼 수 있습니다',
+            '',
+            '### 지원 형식',
+            '',
+            '- U_E팩 4, 6, 8키를 지원합니다',
+            '- Aery팩 5키를 지원합니다',
+            '- 통상 BMS는 4, 5, 6, 8 어떤 형식으로도 플레이 할 수 있습니다',
+            '',
+            '## 설명서',
+            '',
+            'https://prunusnira.notion.site/Rhythm-Tracers-Alpha-Test-34216cef3d1647a58af6350509dfd9cc',
+          ].join('\n');
+          const releaseNotes = release.body ?? '';
+          const releaseNotesSection = releaseNotes.trim()
+            ? `\n\n## 최신 릴리즈 변경사항\n\n${releaseNotes}`
+            : '';
+
+          fs.writeFileSync('README.md', `${readme}${releaseNotesSection}\n`, 'utf8');
+          NODE
       
       - name: Commit and Update
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add README.md
-          git commit -m "docs: update README for release ${{ github.event.release.tag_name }}"
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "docs: update README for release $RELEASE_TAG"
           git push
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
