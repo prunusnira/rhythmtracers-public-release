@@ -2,10 +2,10 @@
 
 ## 최신버전
 
-![Version](https://img.shields.io/badge/RhythmTracers-v0.1.14.00-brightgreen.svg)
-![Publish](https://img.shields.io/badge/Published_at-2026-10-08T15:35:52Z-blue.svg)
+![Version](https://img.shields.io/badge/RhythmTracers-v0.1.15.00-brightgreen.svg)
+![Publish](https://img.shields.io/badge/Published_at-2026-10-17T19:06:16Z-blue.svg)
 
-https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.14.00
+https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.15.00
 
 ## Rhythm Tracers에 대해
 
@@ -38,67 +38,8 @@ https://prunusnira.notion.site/Rhythm-Tracers-34216cef3d1647a58af6350509dfd9cc
 
 # 변경사항
 
-### 7버튼 모드 추가
+## 디자인 변경
 
-- 6B / 8B 선택 사이에 7B 모드를 추가했습니다
-
-### AERY 7KEY 테이블 지원 추가
-
-- 추가로 기존 AERY의 이름을 BMS AERY로 변경했습니다
-
-### 기록 및 리플레이 저장 오류 수정
-
-- 일부 환경에서 기록 및 리플레이 저장이 정상적으로 되지 않는 문제를 수정했습니다
-- 10B, 16B에서도 리플레이를 저장할 수 있도록 개선했습니다
-
-### 평균 레이트 계산 방식 변경
-
-- PERFECT+와 PERFECT만 레이트 계산에 사용되도록 변경되었습니다
-- 나머지 판정은 0%로 처리됩니다
-- 스코어 계산 시 PERFECT+가 2점, PERFECT가 1점으로 계산되는 것을 동일하게 반영했습니다
-
-### 판정 난이도 표시 추가
-
-- Music Select, Play, Result에서 판정난이도를 표기하도록 추가하였습니다
-
-### 싱글/더블 플레이 표시
-
-- 기존 패턴이 싱글용/더블용을 상정하고 만들어졌는지를 확인할 수 있는 표기를 Music Select에 추가하였습니다
-
-### 더블 플레이 시 FAST/SLOW 그래프 오류 수정
-
-- FAST/SLOW 그래프를 켜고 더블플레이 시 게임 조작이 되지 않는 문제를 수정했습니다
-
-### 커스텀 랜덤 추가
-
-- 7B, 10B, 16B에서도 커스텀랜덤을 사용할 수 있도록 추가했습니다
-
-### 일부 옵션의 기본값 변경
-
-- 롱노트 색상을 `기본 노트색과 동일` 하게 표시하는 옵션을 기본옵션으로 변경했습니다
-- 키빔 색상으로 FAST/SLOW를 보여주는 옵션을 기본 ON으로 변경했습니다
-
-### 판정관련 수정
-
-- BAD  판정이 발생 했을 때 콤보가 끊기지만 풀콤보로 표기되는 오류를 수정했습니다
-- 공MISS 판정을 수정하였습니다
-    - 노트가 존재하지 않는 라인을 눌렀을 때 미스 판정이 발생하는 조건 삭제
-    - 기존에는 공MISS 체크 조건이 노트 앞 1000ms였으나, 이를 500ms로 변경했습니다 (앞공MISS)
-    - LR2를 따라 BAD이상 판정을 낸 후 일정 범위내에서 해당 노트를 다시 처리하려고 했을 때 나오는 공MISS는 존재하지 않습니다 (뒷공MISS는 없습니다)
-
-### BGA 수정
-
-- BGA의 출력 비율을 본래 BGA 비율에 맞게 표시하도록 변경했습니다
-- 일부 레이어 BGA가 비정상적인 사이즈/위치로 표시되는 문제를 수정했습니다
-
-### 디럭스 모드 가시성 개선
-
-- 디럭스 모드 적용 시, 토스트 알림을 표시하고 배경색상을 변경하도록 추가했습니다
-
-### 멀티플레이
-
-- 클라이언트가 호스트에 접속 시 플레이 옵션과 시스템 옵션이 표시되고 플레이 할 수 없는 문제를 수정했습니다
-- 멀티플레이에서 디럭스모드로 대결이 가능하도록 추가되었습니다
-    - 디럭스 모드를 켜고 선곡 시 상대방에게 디럭스 모드 여부를 같이 전달하도록 개선되었습니다
+- 신규 디자인 적용
 
 ---
