@@ -2,10 +2,10 @@
 
 ## 최신버전
 
-![Version](https://img.shields.io/badge/RhythmTracers-v0.1.16.00-brightgreen.svg)
-![Publish](https://img.shields.io/badge/Published_at-2026-10-27T11:55:55Z-blue.svg)
+![Version](https://img.shields.io/badge/RhythmTracers-v0.1.16.01-brightgreen.svg)
+![Publish](https://img.shields.io/badge/Published_at-2026-10-27T14:37:49Z-blue.svg)
 
-https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.16.00
+https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.16.01
 
 ## Rhythm Tracers에 대해
 
@@ -36,7 +36,14 @@ https://prunusnira.notion.site/Rhythm-Tracers-34216cef3d1647a58af6350509dfd9cc
 
 ---
 
-## 변경사항
+## 변경사항 (0.1.16.01)
+
+- 검색 결과에서 아래로 내려갈 때 리스트 오류가 나는 문제 수정
+- 기록이 저장되어 있지 않은 곡의 스코어 그래프와 타겟점수에 발생하는 오류 수정
+- Music Select / Course Select 진입 후 ESC를 눌러 Mode Select로 되돌아갈 수 있도록 변경
+- 스테이지 리절트 이후 목록으로 돌아갈 때, 폴더를 열고 플레이 했던 패턴에 커서가 있도록 처리
+
+## 변경사항 (0.1.16.00)
 
 ### 판정등급 변경
 
