@@ -2,10 +2,10 @@
 
 ## 최신버전
 
-![Version](https://img.shields.io/badge/RhythmTracers-v0.1.16.01-brightgreen.svg)
-![Publish](https://img.shields.io/badge/Published_at-2026-10-27T14:37:49Z-blue.svg)
+![Version](https://img.shields.io/badge/RhythmTracers-v0.1.16.02-brightgreen.svg)
+![Publish](https://img.shields.io/badge/Published_at-2026-10-27T15:43:45Z-blue.svg)
 
-https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.16.01
+https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.16.02
 
 ## Rhythm Tracers에 대해
 
@@ -35,6 +35,10 @@ https://prunusnira.notion.site/Rhythm-Tracers-Alpha-Test-34216cef3d1647a58af6350
 https://prunusnira.notion.site/Rhythm-Tracers-34216cef3d1647a58af6350509dfd9cc
 
 ---
+
+## 변경사항 (0.1.16.02)
+
+- AUTO PLAY 마크의 위치를 플레이 필드가 아닌 버전표기영역 위로 이동이 가능하도록 플레이 옵션을 추가했습니다
 
 ## 변경사항 (0.1.16.01)
 
