@@ -2,10 +2,10 @@
 
 ## 최신버전
 
-![Version](https://img.shields.io/badge/RhythmTracers-v0.1.17.00-brightgreen.svg)
-![Publish](https://img.shields.io/badge/Published_at-2026-11-04T13:15:53Z-blue.svg)
+![Version](https://img.shields.io/badge/RhythmTracers-v0.1.17.01-brightgreen.svg)
+![Publish](https://img.shields.io/badge/Published_at-2026-11-07T18:23:47Z-blue.svg)
 
-https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.17.00
+https://github.com/prunusnira/rhythmtracers-public-release/releases/tag/0.1.17.01
 
 ## Rhythm Tracers에 대해
 
@@ -38,15 +38,9 @@ https://prunusnira.notion.site/Rhythm-Tracers-34216cef3d1647a58af6350509dfd9cc
 
 ## 변경사항
 
-### 코스모드 추가
+### 코스모드 레코드 기능 추가
 
-- 코스모드 등록은 BMS Manager를 통해서 진행합니다
-- mocha repository에서 다운로드 가능한 코스 json 파일을 받아 한 폴더 내에 보관해둔 후 해당 폴더를 지정합니다
-
-### 기타
-
-- 비어있는 bms 파일을 로딩하려고 할 때 게임이 강제 종료되는 문제 수정
-- 미사용 리소스 정리
-- BGM 및 사운드 이펙트 일괄 변경
+- 코스모드 플레이 기록을 코스 선택 화면에서 확인할 수 있게 변경하였습니다
+- 곡 별 결과도 같이 볼 수 있습니다
 
 ---
